@@ -3,9 +3,9 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Ruben Young
+  * [LinkedIn](https://www.linkedin.com/in/rubenaryo/), [personal website](https://rubenaryo.com)
+* Tested on: EndeavourOS 03.19.2025 (Arch), AMD Ryzen 7 7800X3D, RTX 4080 SUPER
 
 ### (TODO: Your README)
 
