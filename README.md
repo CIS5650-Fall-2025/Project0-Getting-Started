@@ -5,7 +5,7 @@ Project 0 Getting Started
 
 * Ruben Young
   * [LinkedIn](https://www.linkedin.com/in/rubenaryo/), [personal website](https://rubenaryo.com)
-* Tested on: EndeavourOS 03.19.2025 (Arch), AMD Ryzen 7 7800X3D, RTX 4080 SUPER
+* Tested on: Windows 11, AMD Ryzen 7 7800X3D, RTX 4080 SUPER
 
 ### (TODO: Your README)
 
