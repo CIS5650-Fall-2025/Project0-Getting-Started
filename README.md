@@ -29,6 +29,8 @@ anything here that you don't want to share with the world.)
 
 MISSING DUE TO ERROR
 
+![](/images/nsight_compute_error.png)
+
 5. Chrome GPU support
 
 ![](/images/chrome_gpu.png)
