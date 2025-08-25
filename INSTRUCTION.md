@@ -2,7 +2,7 @@
 
 This project consists of two parts:
 
-1. Getting Started
+1. CUDA GL Check
     * This is due **August 29 2025**. (See [late policy](#late-policy) at the bottom)
     * Instructions for this project are below.
 2. CUDA Introduction
@@ -12,7 +12,7 @@ This project consists of two parts:
     * It will likely take you 1-2 hours to complete. You can spend additional time trying out Nsight Debugger and other tools.
     * Submission is not required. These are for your onboarding into CUDA programming.
 
-# Getting Started: Instructions
+# CUDA GL Check: Instructions
 
 **Summary:** In this project, you will set up your GPU development tools and verify that you can build, run, and do performance analysis.
 
@@ -63,16 +63,16 @@ Note: Do not clone projects directly from the [CIS5650-Fall-2025](https://github
 
 ## Part 2.1: Project Instructions - CUDA
 
-### Part 2.1.1: Build and Run CUDA Getting Started
+### Part 2.1.1: Build and Run CUDA GL Check
 
 Build and run the project and follow the instructions below to complete your README.
 
 In your README, report the Compute Capability of your CUDA-compatible GPU (sometimes called `sm`). Here is the [list of CUDA-compatible GPUs](https://developer.nvidia.com/cuda-gpus) along with their Compute Capabilities.
 
-* `cuda-getting-started/src/` contains the source code.
-* `cuda-getting-started/external/` contains the Windows binaries and headers for GLEW and GLFW.
+* `cuda-gl-check/src/` contains the source code.
+* `cuda-gl-check/external/` contains the Windows binaries and headers for GLEW and GLFW.
 
-**CMake note:** Do not change any build settings or add any files to your project directly (in Visual Studio, Nsight, etc.) Instead, edit the `cuda-getting-started/src/CMakeLists.txt` file. Any files you add must be added here. If you edit it, just rebuild your VS/Nsight project to make it update itself.
+**CMake note:** Do not change any build settings or add any files to your project directly (in Visual Studio, Nsight, etc.) Instead, edit the `cuda-gl-check/src/CMakeLists.txt` file. Any files you add must be added here. If you edit it, just rebuild your VS/Nsight project to make it update itself.
 
 #### Windows
 
@@ -83,7 +83,7 @@ In your README, report the Compute Capability of your CUDA-compatible GPU (somet
 4. Open the CMake GUI to configure the project:
     * `cmake-gui ..` or `"C:\Program Files (x86)\cmake\bin\cmake-gui.exe" ..`
         * Don't forget the `..` part! This tells CMake that the `CMakeLists.txt` file is in the parent directory of `build`.
-    * Make sure that the "Source" directory points to the directory `cuda-getting-started`.
+    * Make sure that the "Source" directory points to the directory `cuda-gl-check`.
     * Click *Configure*.
         * Select your Visual Studio version (2022), and `x64` for your platform. (**NOTE:** you must use x64, as we don't provide libraries for Win32.)
     * Click *Generate*.
@@ -109,12 +109,12 @@ To get started, first use these command line instructions to build and run the p
 
 ```
 cd Project0-Getting-Started
-cd cuda-getting-started
+cd cuda-gl-check
 mkdir build
 cd build
 cmake ..
 make -j8
-./bin/cis5650_getting_started
+./bin/cuda-gl-check
 ```
 
 FAQ & Troubleshooting for Linux
@@ -134,14 +134,14 @@ Nsight Visual Studio Code Edition is the recommended Visual IDE for CIS5650.
 1. Open Visual Studio Code
 2. Install the *Nsight Visual Studio Code Edition* extension for VS Code from the marketplace.
 3. Install the *CMake* and *CMake Tools* extensions for VS Code from the marketplace.
-4. Using *File -> Open Folder*, open the `cuda-getting-started` folder.
+4. Using *File -> Open Folder*, open the `cuda-gl-check` folder.
 5. On the left hand pane, open the `CMake` tab (CMake logo with a wrench).
 6. Under *Project Status*, perform a mouse over. This will reveal a few icons. Click the *Delete Cache and Reconfigure* icon. This will open a command pane. In this, select the *GCC* option or *Unspecified*.
     * Upon successful completion, this will populate the *Project Outline*.
-7. In the *Project Outline*, right click `cis5650_getting_started` and select *Build*.
+7. In the *Project Outline*, right click `cuda-gl-check` and select *Build*.
     * This will show the *Output* pane with the compilation log.
     * You can optionally set the *Set as Build Target* to make it the default build target.
-8. Right click `cis5650_getting_started` again, and this time select `Run in Terminal`. This will start the executable in the terminal and open the window.
+8. Right click `cuda-gl-check` again, and this time select `Run in Terminal`. This will start the executable in the terminal and open the window.
 
 **Nsight Eclipse**
 
@@ -156,9 +156,9 @@ Once you have installed Nsight Eclipse Edition, you are ready to create your pro
 1. Use Cmake to generate your Eclipse project.
     ```
     cd Project0-Getting-Started
-    mkdir cuda-getting-started-build # Eclipse prefers build directories to be siblings of source
-    cd cuda-getting-started-build
-    cmake ../cuda-getting-started -G"Eclipse CDT4 - Unix Makefiles"
+    mkdir cuda-gl-check-build # Eclipse prefers build directories to be siblings of source
+    cd cuda-gl-check-build
+    cmake ../cuda-gl-check -G"Eclipse CDT4 - Unix Makefiles"
     ```
 2. Open Eclipse. Set the workspace to the one *containing* your cloned repo.
 3. *File->Import...->General->Existing Projects Into Workspace*.
@@ -171,7 +171,7 @@ Once you have installed Nsight Eclipse Edition, you are ready to create your pro
 
 ### Part 2.1.2: Modify the CUDA Project and Take a Screenshot
 
-1. Search the code for `TODO`: you'll find one in `cuda-getting-started/src/main.cpp` on line 13. Change the string to your name, rebuild, and run. (`m_yourName = "TODO: YOUR NAME HERE";`)
+1. Search the code for `TODO`: you'll find one in `cuda-gl-check/src/main.cpp` on line 13. Change the string to your name, rebuild, and run. (`m_yourName = "TODO: YOUR NAME HERE";`)
 2. Take a screenshot of the window (including title bar) and save it to the `images` directory for Part 3.
 3. You're done with some code changes now; make a commit!
     * Make sure to `git add` the `main.cpp` file.
@@ -213,9 +213,9 @@ More documentation for Nsight Visual Studio Edition is available at https://docs
 
 #### Nsight Debugging on Linux using Nsight Visual Studio Code Edition
 
-1. Open your `cuda-getting-started` project in Visual Studio Code.
+1. Open your `cuda-gl-check` project in Visual Studio Code.
 2. On the left hand pane, open the `CMake` tab (CMake logo with a wrench).
-3. In the *Project Outline*, right click `cis5650_getting_started` and select *Set as Launch/Debug Target*.
+3. In the *Project Outline*, right click `cuda-gl-check` and select *Set as Launch/Debug Target*.
 4. On the left hand pane, open the *Run and Debug* tab.
 5. Click the *Gear* icon next to the dropdown.
 6. Set up your `launch.json` to look like this, then save the file.
@@ -230,7 +230,7 @@ More documentation for Nsight Visual Studio Edition is available at https://docs
                 "name": "CUDA C++: Launch",
                 "type": "cuda-gdb",
                 "request": "launch",
-                "program": "${workspaceFolder}/build/bin/cuda-getting-started"
+                "program": "${workspaceFolder}/build/bin/cuda-gl-check"
             }
         ]
     }
@@ -247,7 +247,7 @@ More documentation for Nsight Visual Studio Edition is available at https://docs
 
 #### Nsight Debugging on Linux using Nsight Eclipse Edition
 
-1. Open your `cuda-getting-started` project in Nsight Eclipse Edition.
+1. Open your `cuda-gl-check` project in Nsight Eclipse Edition.
     * In the Project Explorer view, select your project to debug. Make sure the project executable is compiled and no error markers are shown on the project.
 2. Right click on the project and go to *Debug As > NVIDIA CUDA GDB Debugger* menu.
 3. You will be offered to switch perspective when you run debugger for the first time. Click “Yes”. Perspective is a window layout preset specifically designed for a particular task.
