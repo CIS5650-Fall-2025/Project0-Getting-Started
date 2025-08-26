@@ -8,6 +8,7 @@ Project 0 Getting Started
   * [Personal website](https://charleszw.com/)
   * [itch.io page](https://aczw.itch.io/)
 * Tested on: Windows 11 Pro 26100.4946, Ryzen 5 7600X @ 4.7Ghz, 32 GB RAM, RTX 5060 Ti 16 GB
+  * Compute Capability: 12.0
 
 ### README
 
