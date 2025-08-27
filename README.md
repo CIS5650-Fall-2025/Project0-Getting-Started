@@ -3,11 +3,12 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Avi Serebrenik
+  * [https://www.linkedin.com/in/avi-serebrenik-a7386426b/](), [https://aviserebrenik.wixsite.com/cvsite]()
+* Tested on: Windows 11, i7-13620H @ 2.4GHz 32GB, RTX 4070 8GB
 
 ### (TODO: Your README)
-
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+![](images/cudaName.png)
+![](images/thread.png)
+![](images/nsight.png)
+![](images/webgl.png)
