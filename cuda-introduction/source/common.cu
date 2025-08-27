@@ -12,7 +12,7 @@ unsigned divup(unsigned size, unsigned div)
     return 0;
 }
 
-void clearHostAndDeviceArray(float *res, float *dev_res, unsigned size, const float value)
+void clearHostAndDeviceArray(float *res, float *dev_res, unsigned size, const int value)
 {
     std::fill(res, res + size, value);
 
