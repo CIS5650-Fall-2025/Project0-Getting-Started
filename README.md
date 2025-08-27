@@ -20,19 +20,30 @@ Project built and compiled successfully in VS 2022.
 Output for name change.
 
 | ![](images/HW0_2.1.2.png) |
+|:--:|
 
 ### Part 2.1.3
 
 NSight debug output for index == 1987.
 
 | ![](images/HW0_2.1.3.png) |
+|:--:|
 
 ### Part 2.1.4
 
 CUDA NSight Systems trace analysis summary.
 
-| ![](images/HW0_2.1.4_analysis_summary.png) |
+| ![](images/HW0_2.1.4_analysis_summary.png) | ![](images/HW0_2.1.4_timeline.png) |
+|:--:|:--:|
 
-CUDA NSight Systems timeline.
+### Part 2.1.5
 
-| ![](images/HW0_2.1.4_timeline.png) |
+CUDA NSight Compute trace report.
+
+There is an error when I launch the report, which is not the GPU permissions error. I am not certain if I am resolving it correctly, or if this report contains the expected output, but when I launch NSight Compute, and then hit play on my project, it will generate only one line, which I manually need to step into to obtain the report. Again, I am not certain if I am doing this correctly, here is a screenshot of what came out of that report.
+
+I tried this several times, the report remains constant.
+
+| ![](images/HW0_2.1.5.png) |
+|:--:|
+
