@@ -17,7 +17,7 @@ Project 0 Getting Started
 
 ![](images/Timeline.png)
 
-
+![](images/Nsight.png)
 
 ![](images/WebGL.png)
 
