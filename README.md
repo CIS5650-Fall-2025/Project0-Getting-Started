@@ -18,4 +18,11 @@ Project built and compiled successfully in VS 2022.
 ### Part 2.1.2
 
 Output for name change.
+
 | ![](\images\HW0_2.1.2.png) |
+
+### Part 2.1.3
+
+NSight debug output for index == 1987.
+
+| ![](\images\HW0_2.1.3.png) |
