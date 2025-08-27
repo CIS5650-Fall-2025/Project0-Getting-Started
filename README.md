@@ -47,3 +47,16 @@ I tried this several times, the report remains constant.
 | ![](images/HW0_2.1.5.png) |
 |:--:|
 
+## Part 2.2
+
+WebGL check output.
+
+| ![](images/HW0_2.2.png) |
+|:--:|
+
+## Part 2.3
+
+WebGPU check output.
+
+| ![](images/HW0_2.3.1.png) | ![](images/HW0_2.3.2.png) |
+|:--:|:--:|
