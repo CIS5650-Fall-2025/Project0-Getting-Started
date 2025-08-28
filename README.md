@@ -39,5 +39,3 @@ Project 0 Getting Started
 <img width="2150" height="1350" alt="2 2" src="https://github.com/user-attachments/assets/33773f01-a983-4a3e-b9a5-220a6ba35764" />
 
 ### WebGPU Screenshot
-
-<img width="1520" height="1376" alt="2 3" src="https://github.com/user-attachments/assets/fed7266c-04c6-47aa-b6ad-3fee19d29ee3" />
