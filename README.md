@@ -5,7 +5,7 @@ Project 0 Getting Started
 
 * Caroline Fernandes
   * [LinkedIn](https://www.linkedin.com/in/caroline-fernandes-0-/), [personal website](https://0cfernandes00.wixsite.com/visualfx)
-* Tested on: Windows 11, i9-14900HX @ 2.20GHz 36GB, GTX 4070 12MB (personal machine)
+* Tested on: Windows 11, i9-14900HX @ 2.20GHz 299GB, GTX 4070 244MB (personal machine)
 
 ### (TODO: Your README)
 
