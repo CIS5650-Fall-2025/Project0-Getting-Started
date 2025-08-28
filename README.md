@@ -7,7 +7,7 @@ Project 0 Getting Started
   * [https://www.linkedin.com/in/avi-serebrenik-a7386426b/](), [https://aviserebrenik.wixsite.com/cvsite]()
 * Tested on: Windows 11, i7-13620H @ 2.4GHz 32GB, RTX 4070 8GB
 
-### (TODO: Your README)
+### Images:
 ![](images/cudaName.png)
 ![](images/thread.png)
 ![](images/nsight.png)
