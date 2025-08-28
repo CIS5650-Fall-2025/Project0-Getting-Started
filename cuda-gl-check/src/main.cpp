@@ -11,7 +11,7 @@
  */
 int main(int argc, char* argv[]) {
     // TODO: Change this line to use your name!
-    m_yourName = "TODO: YOUR NAME HERE";
+    m_yourName = "Henry Han";
 
     if (init(argc, argv)) {
         mainLoop();
