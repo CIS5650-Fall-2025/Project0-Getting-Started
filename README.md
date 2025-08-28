@@ -14,7 +14,8 @@ Built and tested cuda-gl-check using the Nsight debugger. Used Nsight Systems to
 Title Bar:
 ![Title Bar](cuda-gl-check/images/LG_TitleBar_V1.png)
 
-Window:
+Output Window:
+
 ![Window](cuda-gl-check/images/LG_Window_V1.png)
 
 Nsight Systems Report
