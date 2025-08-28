@@ -74,7 +74,7 @@ __host__ __device__ void versionToColor(uchar4* pixel, int version) {
 __global__ void createVersionVisualization(uchar4* PBOpos, int width, int height, int major, int minor) {
     int x = (blockIdx.x * blockDim.x) + threadIdx.x;
     int y = (blockIdx.y * blockDim.y) + threadIdx.y;
-    int index = x + (y * width);
+	int index = x + (y * width);
 
     if (x <= width && y <= height) {
         // Each thread writes one pixel location in the texture (textel)
