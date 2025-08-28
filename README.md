@@ -33,9 +33,12 @@ Project 0 Getting Started
 ## WebGL Screenshot 
 
 ### WebGL Compatibility 
+<img width="1681" height="1366" alt="2 2v2" src="https://github.com/user-attachments/assets/1d1ffe3b-cb4a-48fa-ba5e-ac2cc471f24f" />
 
 ### Chrome GPU
 
 <img width="2150" height="1350" alt="2 2" src="https://github.com/user-attachments/assets/33773f01-a983-4a3e-b9a5-220a6ba35764" />
 
 ### WebGPU Screenshot
+
+<img width="1625" height="1368" alt="2 3_" src="https://github.com/user-attachments/assets/9bda6fdd-e6ae-4fd1-a3d6-000630ffc07a" />
