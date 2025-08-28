@@ -4,8 +4,8 @@ Project 0 Getting Started
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
 
 * Ruichi Zhang
-  [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: Ubuntu 20.04.6 LTS , AMD® Ryzen 9 7950x3d 16-core processor × 32 , NVIDIA GeForce RTX 4080 SUPER
+
+* Tested on: Ubuntu 20.04.6 LTS , AMD® Ryzen 9 7950x3d 16-core processor × 32 , NVIDIA GeForce RTX 4080 SUPER (Personal Computer)
 
 #### Part 2.1.1: Build and Run CUDA GL Check
 
