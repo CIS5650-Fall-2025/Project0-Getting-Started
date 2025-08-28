@@ -10,8 +10,8 @@ Project 0 Getting Started
 **Screenshots**
 Title Bar:
 
-![Title Bar](C:\Users\lewis\Desktop\CIS_5650\Project0-Getting-Started\cuda-gl-check\LG_TitleBar_V1.png)
+![Title Bar](cuda-gl-check/LG_TitleBar_V1.png)
 
 Window:
 
-![Window](C:\Users\lewis\Desktop\CIS_5650\Project0-Getting-Started\cuda-gl-check\LG_Window_V1.png)
+![Window](cuda-gl-check/LG_Window_V1.png)
