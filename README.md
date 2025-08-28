@@ -11,21 +11,21 @@ Project 0 Getting Started
 
 ## Output window from exe: 
 
-<img width="809" height="850" alt="image" src="https://github.com/user-attachments/assets/5965f51e-c991-4215-9f15-e64712bae24f" />
+![exeoutput](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.1.2.png)
 
 ## NSight Debugging Window from Visual Studio
 
-<img width="1779" height="572" alt="image" src="https://github.com/user-attachments/assets/9d53117e-c169-4666-b7e0-e4b453ac6fdb" />
+![debuggingwin](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.1.3.png)
 
 ## NSight Systems Report Screenshots
 
 ### Analysis
 
-<img width="1361" height="1405" alt="2 1 4v2" src="https://github.com/user-attachments/assets/8167fae3-db7c-4742-96af-a7c1b9934c0a" />
+![systemsanalysis](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.1.4.png)
 
 ### Timeline
 
-<img width="2222" height="1141" alt="2 1 4" src="https://github.com/user-attachments/assets/1674af54-13c6-420e-81ac-8740ebcf1277" />
+![systemstimeline](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.1.4v2.png)
 
 ## NSight Compute Report 
 ### Unavailable due to a bug in Compute 
@@ -33,12 +33,13 @@ Project 0 Getting Started
 ## WebGL Screenshot 
 
 ### WebGL Compatibility 
-<img width="1681" height="1366" alt="2 2v2" src="https://github.com/user-attachments/assets/1d1ffe3b-cb4a-48fa-ba5e-ac2cc471f24f" />
+
+![glcomp](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.2v2.png)
 
 ### Chrome GPU
 
-<img width="2150" height="1350" alt="2 2" src="https://github.com/user-attachments/assets/33773f01-a983-4a3e-b9a5-220a6ba35764" />
+![chromegpu](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.2.png)
 
 ### WebGPU Screenshot
 
-<img width="1625" height="1368" alt="2 3_" src="https://github.com/user-attachments/assets/9bda6fdd-e6ae-4fd1-a3d6-000630ffc07a" />
+![webgpu](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.2.png)
