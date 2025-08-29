@@ -7,10 +7,8 @@ Project 0 Getting Started
   * [LinkedIn](https://linkedin.com/in/ytian1109), [personal website](https://github.com/tonytgrt)
 * Tested on: Windows 11, i9-13900H @ 2.60GHz 32GB, RTX 5080 16GB (Personal Laptop with External GPU)
 
-### (TODO: Your README)
+### README
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
 
 1. Render output of executable
 
