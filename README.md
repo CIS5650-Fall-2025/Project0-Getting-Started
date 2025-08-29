@@ -78,7 +78,7 @@ WebGL is fully supported on this system:
 - **isFallbackAdapter:** false  
 - **Status:** `chrome://gpu` reports **WebGPU: Hardware accelerated**  
 
-![WebGPU Report](images/webgpu-report.png)
+![WebGPU Report](images/webgpu-report.PNG)
 
 Here is a sample on [WebGPU Samples](https://webgpu.github.io/webgpu-samples)
 
