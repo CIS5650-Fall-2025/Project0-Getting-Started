@@ -1,85 +1,8 @@
-﻿  Building Custom Rule C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/CMakeLists.txt
-  Compiling CUDA source file ..\source\saxpy.cu...
-  Compiling CUDA source file ..\source\common.cu...
-  
-  C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\bin\nvcc.exe"  --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu    -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\include"  -G   --keep-dir saxpy\x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -std=c++17 -arch=native -src-in-ptx -Xcompiler="/EHsc -Zi -Ob0" -g  -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -D"CMAKE_INTDIR=\"Debug\"" -Xcompiler "/EHsc /W1 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/Fdsaxpy.dir\Debug\vc143.pdb" -o saxpy.dir\Debug\common.obj "C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\common.cu" 
+﻿  Compiling CUDA source file ..\source\saxpy.cu...
   
   C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\bin\nvcc.exe"  --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu    -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\include"  -G   --keep-dir saxpy\x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -std=c++17 -arch=native -src-in-ptx -Xcompiler="/EHsc -Zi -Ob0" -g  -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -D"CMAKE_INTDIR=\"Debug\"" -Xcompiler "/EHsc /W1 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/Fdsaxpy.dir\Debug\vc143.pdb" -o saxpy.dir\Debug\saxpy.obj "C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu" 
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(15): warning #186-D: pointless comparison of unsigned integer with zero
-        if (idx >= 0)
-                ^
-  
-  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(41): warning #186-D: pointless comparison of unsigned integer with zero
-        for (unsigned i = 0; i < size; i++) {
-                               ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(48): warning #186-D: pointless comparison of unsigned integer with zero
-        for (unsigned i = 0; i < size; i++)
-                               ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(67): warning #549-D: variable "d_z" is used before its value is set
-        clearHostAndDeviceArray(z, d_z, size);
-                                   ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(15): warning #186-D: pointless comparison of unsigned integer with zero
-        if (idx >= 0)
-                ^
-  
-  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(41): warning #186-D: pointless comparison of unsigned integer with zero
-        for (unsigned i = 0; i < size; i++) {
-                               ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(48): warning #186-D: pointless comparison of unsigned integer with zero
-        for (unsigned i = 0; i < size; i++)
-                               ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(67): warning #549-D: variable "d_z" is used before its value is set
-        clearHostAndDeviceArray(z, d_z, size);
-                                   ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(52): warning #177-D: variable "d_x" was declared but never referenced
-        float *d_x, *d_y, *d_z;
-               ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(52): warning #177-D: variable "d_y" was declared but never referenced
-        float *d_x, *d_y, *d_z;
-                     ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(15): warning #186-D: pointless comparison of unsigned integer with zero
-        if (idx >= 0)
-                ^
-  
-  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(41): warning #186-D: pointless comparison of unsigned integer with zero
-        for (unsigned i = 0; i < size; i++) {
-                               ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(48): warning #186-D: pointless comparison of unsigned integer with zero
-        for (unsigned i = 0; i < size; i++)
-                               ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(67): warning #549-D: variable "d_z" is used before its value is set
-        clearHostAndDeviceArray(z, d_z, size);
-                                   ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(52): warning #177-D: variable "d_x" was declared but never referenced
-        float *d_x, *d_y, *d_z;
-               ^
-  
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(52): warning #177-D: variable "d_y" was declared but never referenced
-        float *d_x, *d_y, *d_z;
-                     ^
-  
   saxpy.cu
-  tmpxft_000139b8_00000000-8_saxpy.compute_120.cudafe1.cpp
-C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\source\saxpy.cu(67): warning C4700: uninitialized local variable 'd_z' used
-  common.cu
-  tmpxft_00013998_00000000-8_common.compute_120.cudafe1.cpp
+  tmpxft_000145ac_00000000-8_saxpy.compute_120.cudafe1.cpp
      Creating library C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/build/lib/Debug/saxpy.lib and object C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/build/lib/Debug/saxpy.exp
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
   saxpy.vcxproj -> C:\Users\24112\OneDrive - PennO365\Penn\CIS 5650\Project-0\cuda-introduction\build\bin\Debug\saxpy.exe
