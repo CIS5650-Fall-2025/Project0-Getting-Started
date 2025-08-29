@@ -3,11 +3,21 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Cecilia Chen 
+  * [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&style=flat)](https://www.linkedin.com/in/yue-chen-643182223/)
+* Tested on: Windows 11, i7-13700F @ 2.1GHz 16GB, GeForce GTX 4070 12GB (Personal Computer)
 
-### (TODO: Your README)
+### Result
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+* Test 1
+![](images/2-1-2.png)
+
+* Test 2 - Debugging
+![](images/2-1-3.png)
+
+* WebGL Report
+![](images/2-2.png)
+
+* WebGPU Report
+![](images/2-3.png)
+
