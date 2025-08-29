@@ -102,6 +102,8 @@ int main(int argc, char *argv[])
 
     // LOOK: Use postprocess to check the result
     compareReferenceAndResult(z_gold, z, size, 1e-6);
+
+
     std::cout << "****************************************************" << std::endl << std::endl;
     ////////////////////////////////////////////////////////////
 

@@ -68,8 +68,8 @@ int main(int argc, char *argv[])
     // TODO 1: Initialize sizes. Start with simple like 32 x 32.
     // TODO Optional: Try different sizes - both square and non-square. Use these as examples:
     // 1024 x 1024, 2048 x 2048, 64 x 16, 128 x 768, 63 x 63, 31 x 15, 1025 x 1025, 1234 x 3153
-    const unsigned sizeX = 32;
-    const unsigned sizeY = 32;
+    const unsigned sizeX = 106;
+    const unsigned sizeY = 171;
 
     // LOOK: Allocate host arrays. The gold arrays are used to store the results from CPU.
     float* a = new float[sizeX * sizeY];
