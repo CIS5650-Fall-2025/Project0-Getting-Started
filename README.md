@@ -3,11 +3,28 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Henry Han
+  * https://github.com/sirenri2001
+  * https://www.linkedin.com/in/henry-han-a832a6284/
+* Tested on: Windows 11 Pro 24H2, i7-9750H @ 2.60GHz 16GB, RTX 2070 Max-Q
 
-### (TODO: Your README)
+### Screenshots
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+**Running Application**
+<img src="images/App.png"/>
+
+**Warp Info & Autos**
+<img src="images/WarpInfo_Autos.png"/>
+
+
+**NSight System**
+<img src="images/NSSystem.png"/>
+
+**NSight Compute: I made a few tries to get NS Compute to work, but as soon as I select `Profile Kernels`, it will suddenly crush**
+<img src="images/NSCompute.png"/>
+
+**WebGL**
+<img src="images/WebGL.png"/>
+
+**WebGPU**
+<img src="images/WebGPU.png"/>
