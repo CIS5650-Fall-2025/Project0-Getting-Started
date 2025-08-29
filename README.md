@@ -7,7 +7,7 @@ Project 0 Getting Started
   * [LinkedIn](https://www.linkedin.com/in/sirui-zhu-28a24a260/)
 * Tested on: Windows 11, i7-13620H, RTX 4060 (Personal)
 
-### (TODO: Your README)
+## Compute Capability
 
 Compute Capability: 8.9
 
@@ -17,13 +17,13 @@ Compute Capability: 8.9
 ![](images/Window.png)
 
 ### Nsight Debugging
-![](images/Nsight%20Debugging.png)
+![](images/NSightDebugging.png)
 
 ### Nsight Systems
-![](images/Nsight%20Systems.png)
+![](images/NSightSystems.png)
 
 ### Nsight Compute
-![](images/Nsight%20Compute.png)
+![](images/NSightCompute.png)
 
 ### WebGL Report
 ![](images/WebGL.png)
