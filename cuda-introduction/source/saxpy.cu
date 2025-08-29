@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
     // TODO 1: Set the size. Start with something simple like 64.
     // TODO Optional: Try out these sizes: 256, 1024, 2048, 14, 103, 1025, 3127
-    const unsigned size = 64;
+    const unsigned size = 3127;
 
     // Host arrays.
     float* x = new float[size];
