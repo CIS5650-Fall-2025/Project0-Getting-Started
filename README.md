@@ -5,7 +5,7 @@ Project 0 Getting Started
 
 * Muqiao Lei
   * [LinkedIn](https://www.linkedin.com/in/muqiao-lei-633304242/) · [GitHub](https://github.com/rmurdock41)
-* Tested on: Windows 10, LAPTOP-O1QJCG69, NVIDIA GeForce RTX 3060 Laptop GPU (Personal Computer)
+* Tested on: Windows 10, 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz 2.30 GHz, NVIDIA GeForce RTX 3060 Laptop GPU (Personal Computer)
 
 ### CUDA GL Check Results
 
