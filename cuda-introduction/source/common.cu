@@ -4,12 +4,14 @@
 #include <algorithm>
 #include <cmath>
 #include <iostream>
+#include <iomanip>
 
 unsigned divup(unsigned size, unsigned div)
 {
     // TODO: implement a 1 line function to return the divup operation.
     // Note: You only need to use addition, subtraction, and division operations.
-    return 0;
+
+    return ((size + div - 1) / div);
 }
 
 void clearHostAndDeviceArray(float *res, float *dev_res, unsigned size, const int value)
@@ -40,5 +42,16 @@ bool compareReferenceAndResult(const float *ref, const float *res, unsigned size
         std::cout << termcolor::green << "Post process check passed!!" << termcolor::reset << std::endl;
 
     return passed;
+}
+
+// MATRIX PRINTING HELPER
+void printMatrix(const float* matrix, int numRows, int numCols) {
+    for (int i = 0; i < numRows; i++) {
+        for (int j = 0; j < numCols; j++) {
+            std::cout << std::setw(8) << matrix[i * numCols + j] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << std::endl;
 }
 

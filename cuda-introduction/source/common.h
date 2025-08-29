@@ -40,3 +40,5 @@ void clearHostAndDeviceArray(float *res, float *dev_res, unsigned size, const in
  * Return true if results match. Otherwise return false.
  */
 bool compareReferenceAndResult(const float *ref, const float *res, unsigned size, float epsilon = 0.0f);
+
+void printMatrix(const float* matrix, int numRows, int numCols);
