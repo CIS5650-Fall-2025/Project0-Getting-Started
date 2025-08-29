@@ -10,6 +10,9 @@ Project 0 Getting Started
 
 ### Screenshots
 
+**Running Application**
+<img src="images/App.png"/>
+
 **Warp Info & Autos**
 <img src="images/WarpInfo_Autos.png"/>
 
