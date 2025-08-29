@@ -5,10 +5,23 @@ Project 0 Getting Started
 
 * Raymond Feng
   * [LinkedIn](https://www.linkedin.com/in/raymond-ma-feng/), [personal website](https://www.rfeng.dev/)
-* Tested on: (TODO) Windows 11, i9-9900KF @ 3.60GHz 32GB, NVIDIA GeForce RTX 2070 SUPER (Personal Computer)
+* Tested on: Windows 11, i9-9900KF @ 3.60GHz 32GB, NVIDIA GeForce RTX 2070 SUPER (Personal Computer)
   * Compute Capability: 7.5
 
-### (TODO: Your README)
+### 2.1.2 - Modify the CUDA Project and Take a Screenshot
+![](images/image1.png)
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+### 2.1.3 - Nsight Debugging
+![](images/image2.png)
+
+### 2.1.4 - Nsight Systems
+![](images/image3.png)
+
+### 2.1.5 - Nsight Systems
+Skipped due to not working. [Ed post](https://edstem.org/us/courses/81464/discussion/6880884)
+
+### 2.2 - WebGL
+![](images/image5.png)
+
+### 2.3 - WebGPU
+![](images/image6.png)
