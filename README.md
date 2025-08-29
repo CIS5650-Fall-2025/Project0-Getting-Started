@@ -18,8 +18,10 @@ Project 0 Getting Started
 
 Include screenshots, analysis, etc. (Remember, this is public, so don't put anything here that you don't want to share with the world.)
 
-|Part 2.1.2|Part 2.1.4|
+|Part 2.1.2|Part 2.1.3|
 |:--------:|:--------:|
-|![](images/part_2_1_2.png)|![](images/part_2_1_4.png)|
+|![](images/part_2_1_2.png)|![](images/part_2_1_3.png)|
+|Part 2.1.4|Part 2.1.5|
+|![](images/part_2_1_4.png)|Skipped due to issues. See [Ed post](https://edstem.org/us/courses/81464/discussion/6880884).|
 |Part 2.2|Part 2.3|
 |![](images/part_2_2.png)|![](images/part_2_3.png)|
