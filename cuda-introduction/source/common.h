@@ -33,7 +33,7 @@ unsigned divup(unsigned size, unsigned div);
 /**
  * Function to set a host and device array to value (-1.0 as default).
  */
-void clearHostAndDeviceArray(float *res, float *dev_res, unsigned size, const float value = -1.0);
+void clearHostAndDeviceArray(float *res, float *dev_res, unsigned size, const int value = 0);
 
 /**
  * Function to check a reference and result array, optionally within an epsilon.
