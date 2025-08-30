@@ -13,22 +13,22 @@ notes: vLab PCs limit user's permission on software installation and some NVIDIA
 
 #### Test program and Nsight debugger
 
-![2.1.2](images\2.1.2.png)
+![2.1.2](images/2.1.2.png)
 
-![2.1.3](images\2.1.3.png)
+![2.1.3](images/2.1.3.png)
 
 #### Compatibility of Nsight Systems and Nsight Computes
 
 It says it cannot communicate with the localhost, due to lack of permission.
 
-![2.1.4](images\2.1.4.png)
+![2.1.4](images/2.1.4.png)
 
 It says it lacks permission to access NVIDIA GPU Performance Counters.
 
-![2.1.5](images\2.1.5.png)
+![2.1.5](images/2.1.5.png)
 
 #### Compatibility Check for WebGL and WebGPU
 
-![2.2](images\2.2.png)
+![2.2](images/2.2.png)
 
-![2.3](images\2.3.png)
+![2.3](images/2.3.png)
