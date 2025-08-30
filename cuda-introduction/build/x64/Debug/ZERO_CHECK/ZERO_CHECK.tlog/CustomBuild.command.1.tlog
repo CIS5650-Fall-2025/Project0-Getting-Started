@@ -1,0 +1,10 @@
+^C:\USERS\24112\ONEDRIVE - PENNO365\PENN\CIS 5650\PROJECT-0\CUDA-INTRODUCTION\BUILD\CMAKEFILES\E364754FE6689B425DABBE6C511AAF5A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction" "-BC:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/build/CUDAIntroduction.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

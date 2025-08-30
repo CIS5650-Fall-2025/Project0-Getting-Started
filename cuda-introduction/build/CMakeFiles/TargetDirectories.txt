@@ -1,0 +1,5 @@
+C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/build/CMakeFiles/saxpy.dir
+C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/build/CMakeFiles/transpose.dir
+C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/build/CMakeFiles/matmul.dir
+C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-introduction/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,3 @@
+C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-getting-started/out/build/x64-Debug/CMakeFiles/cis5650_getting_started.dir
+C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-getting-started/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-getting-started/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

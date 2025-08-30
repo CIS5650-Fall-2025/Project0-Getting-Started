@@ -1,0 +1,10 @@
+^C:\USERS\24112\ONEDRIVE - PENNO365\PENN\CIS 5650\PROJECT-0\CUDA-GETTING-STARTED\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-getting-started" "-BC:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-getting-started/build" --check-stamp-file "C:/Users/24112/OneDrive - PennO365/Penn/CIS 5650/Project-0/cuda-getting-started/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
