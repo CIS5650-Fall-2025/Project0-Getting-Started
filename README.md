@@ -3,11 +3,16 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Pavel Zdravkov Peev
+  * LinkedIn: https://www.linkedin.com/in/pavel-peev-5568561b9/
+  * Personal Website: https://www.Cartaphil.com
+* Tested on: Windows 11, i7-12700, NVIDIA T1000, (SEAS VLAB 007)
 
-### (TODO: Your README)
+### Analysis and Screenshots.
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+Had problems with 2.1.4 and 2.1.5 due to not having administrative access on the virtual lab computers.
+Was expecting PC to arrive 8/28/2025, but it seems to have been delayed, will redo with new pc when it arrives.
+
+### 2.1.2
+<img width="397" height="418" alt="2-1-2-Screenshot" src="https://github.com/user-attachments/assets/945490a4-9f9c-4ad0-88f1-34a8e8fda4d6" />
+
