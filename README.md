@@ -9,6 +9,19 @@ Project 0 Getting Started
 
 ### README
 
+## SUMMAYR
+
+    This is my first time coding with CUDA, so I'm not sure if I have successfully completed all the tasks for Project 0.
+
+    Yesterday, I reviewed the class slide documents, which reinforced my understanding of how the GPU operates and its specialized terminology. I was particularly confused about the number of threads that can run simultaneously, especially regarding CPU cores versus GPU cores. However, it's clear to me now.
+
+    I also found some pretty good learning materials.
+
+  [CUDA Thread indexing](https://www.eecs.umich.edu/courses/eecs471/resources/materials/CUDA-Thread-Indexing-Cheatsheet.pdf).
+
+    
+
+
 ## screenshots 
 - part 2.12
 ![part 2.12](images/01_cudaGLCheck_Lobi.png)
