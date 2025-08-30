@@ -67,7 +67,7 @@ __host__ __device__ void versionToColor(uchar4* pixel, int version) {
             pixel->x = 255; pixel->y =   0; pixel->z = 128; break;
         default:
             pixel->x =   0; pixel->y =   0; pixel->z =   0;
-    }
+    }  
 }
 
 // Kernel that writes the image to the OpenGL PBO directly.
