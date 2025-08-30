@@ -9,3 +9,8 @@ Project 0 Getting Started
 
 ### README
 * Compute Capability: 8.6
+![](images/1.png)
+![](images/2.png)
+![](images/3.png)
+![](images/5.png)
+![](images/6.png)
