@@ -1,0 +1,3 @@
+C:/Users/qaqta/Desktop/CIS5650Proj00/Project0-Getting-Started/build/CMakeFiles/cuda-gl-check.dir
+C:/Users/qaqta/Desktop/CIS5650Proj00/Project0-Getting-Started/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/qaqta/Desktop/CIS5650Proj00/Project0-Getting-Started/build/CMakeFiles/ZERO_CHECK.dir

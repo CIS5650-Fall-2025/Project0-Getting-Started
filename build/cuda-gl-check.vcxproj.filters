@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\qaqta\Desktop\CIS5650Proj00\Project0-Getting-Started\cuda-gl-check\src\glslUtility.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\qaqta\Desktop\CIS5650Proj00\Project0-Getting-Started\cuda-gl-check\src\main.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\qaqta\Desktop\CIS5650Proj00\Project0-Getting-Started\cuda-gl-check\src\glslUtility.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\qaqta\Desktop\CIS5650Proj00\Project0-Getting-Started\cuda-gl-check\src\kernel.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\qaqta\Desktop\CIS5650Proj00\Project0-Getting-Started\cuda-gl-check\src\main.hpp">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\cuda-gl-check\src\kernel.cu">
+      <Filter>Sources</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\qaqta\Desktop\CIS5650Proj00\Project0-Getting-Started\cuda-gl-check\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{E095A494-0FF0-3E85-95DF-B3E1A57EE2CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{E9B6E20A-A26A-3DEE-810C-08A9BBE0108B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
