@@ -5,7 +5,7 @@ Project 0 Getting Started
 
 * Jiawen Wang
   * [LinkedIn](https://www.linkedin.com/in/cocodayow/)
-* Tested on: Tested on: Windows 11, i9-11900H @ 2.50GHz, 32GB RAM, NVIDIA GeForce RTX 3080 Laptop GPU
+* Tested on: Windows 11, i9-11900H @ 2.50GHz, 32GB RAM, NVIDIA GeForce RTX 3080 Laptop GPU
 
 
 ### README
