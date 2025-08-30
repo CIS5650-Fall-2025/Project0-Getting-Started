@@ -3,11 +3,45 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Yunhao Qian
+  * [LinkedIn](www.linkedin.com/in/yunhao-qian-026980170)
+  * [GitHub](https://github.com/yunhao-qian)
+* Tested on my personal computer:
+  * OS: Windows 11, 24H2
+  * CPU: 13th Gen Intel(R) Core(TM) i7-13700 (2.10 GHz)
+  * GPU: NVIDIA GeForce RTX 4090
+  * RAM: 32.0 GB
 
-### (TODO: Your README)
+## Part 2.1: Project Instructions - CUDA
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+### Part 2.1.2: Modify the CUDA Project and Take a Screenshot
+
+![](images/Screenshot%202025-08-29%20191553.png)
+
+### Part 2.1.3: Nsight Debugging
+
+#### Nsight Debugging on Windows using Nsight Visual Studio Edition
+
+![](images/Screenshot%202025-08-29%20193629.png)
+
+#### Nsight Systems on Windows & Linux
+
+Analysis Summary:
+
+![](images/Screenshot%202025-08-29%20194129.png)
+
+Timeline:
+
+![](images/Screenshot%202025-08-29%20194252.png)
+
+### Part 2.1.5: Nsight Compute
+
+![](images/Screenshot%202025-08-29%20201102.png)
+
+## Part 2.2: Project Instructions - WebGL
+
+![](images/Screenshot%202025-08-29%20201404.png)
+
+## Part 2.3: Project Instructions - WebGPU
+
+![](images/Screenshot%202025-08-29%20201523.png)
