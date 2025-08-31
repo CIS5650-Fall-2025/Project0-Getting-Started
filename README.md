@@ -9,10 +9,9 @@ Project 0 Getting Started
 
 ### README
 
-![](images/Screenshot 2025-08-30 223233.png)
+![](images/Screenshot%202025-08-30%20223233.png)
+![](images/Screenshot%202025-08-30%20223315.png)
+![](images/Screenshot%202025-08-30%20231757.png)
+![](images/Screenshot%202025-08-30%20234604.png)
 
-![](images/Screenshot 2025-08-30 223315.png)
-
-![](images/Screenshot 2025-08-30 231757.png)
-
-![](images/Screenshot 2025-08-30 234604.png)
+note: had issue running Project 0 with Nsight Compute as recommended in Step 2.1.5
