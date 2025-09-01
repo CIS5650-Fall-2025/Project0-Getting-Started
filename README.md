@@ -3,11 +3,14 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Joanne Li
+  * [LinkedIn](https://www.linkedin.com/in/zhuoran-li-856658244/)
+* Tested on: Windows 11, AMD Ryzen 5 5600H @ 3.30 GHz 16.0GB, NVIDIA GeForce RTX 3050 Laptop GPU 4GB
 
-### (TODO: Your README)
-
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+### README
+* Compute Capability: 8.6
+![](images/1.png)
+![](images/2.png)
+![](images/3.png)
+![](images/5.png)
+![](images/6.png)
