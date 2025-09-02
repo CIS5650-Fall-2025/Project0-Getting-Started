@@ -35,9 +35,9 @@ int main(int argc, char *argv[])
     // Then try large multiple-block square matrix like 64x64 up to 2048x2048.
     // Then try square, non-power-of-two like 15x15, 33x33, 67x67, 123x123, and 771x771
     // Then try rectangles with powers of two and then non-power-of-two.
-    const unsigned sizeMX = 32;
-    const unsigned sizeXY = 32;
-    const unsigned sizeNY = 32;
+    const unsigned sizeMX = 23;
+    const unsigned sizeXY = 67;
+    const unsigned sizeNY = 45;
 
     // TODO 2: Allocate host 1D arrays for:
     // matrixM[sizeMX, sizeXY]
@@ -49,10 +49,12 @@ int main(int argc, char *argv[])
     float* matrixP;
     float* matrixPGold;
 
-	int size_in_bytes = sizeMX * sizeXY * sizeof(float);
-	CUDA(cudaMallocHost((void**)&matrixM, size_in_bytes));
-	CUDA(cudaMallocHost((void**)&matrixN, size_in_bytes));
-	CUDA(cudaMallocHost((void**)&matrixP, size_in_bytes));
+	int size_in_bytes_M = sizeMX * sizeXY * sizeof(float);
+	CUDA(cudaMallocHost((void**)&matrixM, size_in_bytes_M));
+	int size_in_bytes_N = sizeXY * sizeNY * sizeof(float);
+	CUDA(cudaMallocHost((void**)&matrixN, size_in_bytes_N));
+	int size_in_bytes_P = sizeMX * sizeNY * sizeof(float);
+	CUDA(cudaMallocHost((void**)&matrixP, size_in_bytes_P));
 	matrixPGold = new float[sizeMX * sizeNY];
     // LOOK: Setup random number generator and fill host arrays and the scalar a.
     std::random_device rd;
@@ -86,12 +88,12 @@ int main(int argc, char *argv[])
     float *d_matrixM, *d_matrixN, *d_matrixP;
 
     // TODO 4: Allocate memory on the device for d_matrixM, d_matrixN, d_matrixP.
-	CUDA(cudaMalloc((void**)&d_matrixM, size_in_bytes));
-	CUDA(cudaMalloc((void**)&d_matrixN, size_in_bytes));
-	CUDA(cudaMalloc((void**)&d_matrixP, size_in_bytes));
+	CUDA(cudaMalloc((void**)&d_matrixM, size_in_bytes_M));
+	CUDA(cudaMalloc((void**)&d_matrixN, size_in_bytes_N));
+	CUDA(cudaMalloc((void**)&d_matrixP, size_in_bytes_P));
     // TODO 5: Copy array contents of M and N from the host (CPU) to the device (GPU)
-	CUDA(cudaMemcpy(d_matrixM, matrixM, size_in_bytes, cudaMemcpyHostToDevice));
-	CUDA(cudaMemcpy(d_matrixN, matrixN, size_in_bytes, cudaMemcpyHostToDevice));
+	CUDA(cudaMemcpy(d_matrixM, matrixM, size_in_bytes_M, cudaMemcpyHostToDevice));
+	CUDA(cudaMemcpy(d_matrixN, matrixN, size_in_bytes_N, cudaMemcpyHostToDevice));
     CUDA(cudaDeviceSynchronize());
 
     ////////////////////////////////////////////////////////////
@@ -106,13 +108,13 @@ int main(int argc, char *argv[])
     // HINT: The shape of matrices has no impact on launch configuaration
     DIMS dims;
     dims.dimBlock = dim3(16, 16, 1);
-	dims.dimGrid = dim3(divup(sizeNY, dims.dimBlock.x), divup(sizeMX, dims.dimBlock.y), 1);
+	dims.dimGrid = dim3(divup(sizeMX, dims.dimBlock.x), divup(sizeNY, dims.dimBlock.y), 1);
 
     // TODO 7: Launch the matrix transpose kernel
     // matrixMultiplicationNaive<<<>>>();
 	matrixMultiplicationNaive <<<dims.dimGrid, dims.dimBlock >>> (d_matrixP, d_matrixM, d_matrixN, sizeMX, sizeNY, sizeXY);
     // TODO 8: copy the answer back to the host (CPU) from the device (GPU)
-	CUDA(cudaMemcpy(matrixP, d_matrixP, size_in_bytes, cudaMemcpyDeviceToHost));
+	CUDA(cudaMemcpy(matrixP, d_matrixP, size_in_bytes_P, cudaMemcpyDeviceToHost));
     // LOOK: Use compareReferenceAndResult to check the result
     compareReferenceAndResult(matrixPGold, matrixP, sizeMX * sizeNY, 1e-3);
 
