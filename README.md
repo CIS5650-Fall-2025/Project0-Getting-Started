@@ -81,7 +81,7 @@ Final `launch.json` configuration:
 
 ### Part 2.1.4: Nsight Systems
 
-Configuration:
+Configuration:\
 ![img](images/nsight_systems_config.png)
 
 Timeline Window:
