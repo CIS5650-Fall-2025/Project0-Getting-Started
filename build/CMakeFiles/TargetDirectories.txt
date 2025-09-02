@@ -1,0 +1,3 @@
+C:/College/CIS565/Project0-Getting-Started/build/CMakeFiles/cuda-gl-check.dir
+C:/College/CIS565/Project0-Getting-Started/build/CMakeFiles/ALL_BUILD.dir
+C:/College/CIS565/Project0-Getting-Started/build/CMakeFiles/ZERO_CHECK.dir
