@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "cpp": "cuda-cpp",
+        "hpp": "cuda-cpp"
+    }
+}

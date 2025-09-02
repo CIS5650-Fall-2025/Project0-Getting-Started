@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CUDA C++: Launch",
+            "type": "cuda-gdb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/cuda-gl-check",
+            "environment": [
+                { "name": "__NV_PRIME_RENDER_OFFLOAD", "value": "1" },
+                { "name": "__GLX_VENDOR_LIBRARY_NAME", "value": "nvidia" }
+            ]
+        }
+    ]
+}
