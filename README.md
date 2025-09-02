@@ -9,7 +9,7 @@ Project 0 Getting Started
 
 ### Screenshots
 
-Note: Using the virtual labs from Moore 100C with very limited permission. Nsight systems and Nsight Compute does not work. 
+Note: Using the virtual labs from Moore 100C with very limited permission. 
 
 ### Part 2.1.2: Modify the CUDA Project and Take a Screenshot
 ![2.1.2](images/image1.png)
