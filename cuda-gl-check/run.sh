@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 
+CURRENT_DIR=$(pwd)
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
 while true; do
-    read -p "Do you want to proceed? (y/n): " yn
+    read -p "Do you want to re-build? (y/n): " yn
     case $yn in
-        [Yy]* ) 
+        [Yy]* )
+        cd $SCRIPT_DIR; # cd to where script is located
+
         trash build;
         mkdir build && cd build;
         cmake ..;
         make -j$(nproc --all);
-        cd ..;
+
+        cd $CURRENT_DIR; # cd to stored original directory 
         break;;
         [Nn]* ) 
         break;;
@@ -16,6 +22,6 @@ while true; do
     esac
 done
 
-__NV_PRIME_RENDER_OFFLAND=1 __GLX_VENDOR_LIBRARY_NAME=nvidia ./build/bin/cuda-gl-check
+__NV_PRIME_RENDER_OFFLAND=1 __GLX_VENDOR_LIBRARY_NAME=nvidia $SCRIPT_DIR/build/bin/cuda-gl-check
 
 
