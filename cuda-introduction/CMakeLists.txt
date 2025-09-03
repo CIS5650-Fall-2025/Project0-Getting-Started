@@ -39,7 +39,7 @@ foreach(exe ${EXECUTABLES})
     elseif(CMAKE_VERSION VERSION_LESS "3.24.0")
         set_target_properties(${exe} PROPERTIES CUDA_ARCHITECTURES all-major)
     else()
-        set_target_properties(${exe} PROPERTIES CUDA_ARCHITECTURES native)
+        set_target_properties(${exe} PROPERTIES CUDA_ARCHITECTURES 89) # CHANGED THIS FROM native TO 89
     endif()
     target_compile_options(${exe} PRIVATE "$<$<AND:$<CONFIG:Debug,RelWithDebInfo>,$<COMPILE_LANGUAGE:CUDA>>:-G;-src-in-ptx>")
     target_compile_options(${exe} PRIVATE "$<$<AND:$<CONFIG:Release>,$<COMPILE_LANGUAGE:CUDA>>:-lineinfo;-src-in-ptx>")
