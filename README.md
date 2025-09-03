@@ -5,7 +5,7 @@ Project 0 Getting Started
 
 * Oliver Hendrych
   * [LinkedIn](https://www.linkedin.com/in/oliver-hendrych/)
-* Tested on: Windows 11, i7-14700K @ 3.4GHz 32GB, RTX 4070 SUPER 12GB (Peronsal)
+* Tested on: Windows 11, i7-14700K @ 3.4GHz 32GB, RTX 4070 SUPER 12GB (Personal)
 
 ### (TODO: Your README)
 
@@ -15,3 +15,6 @@ Compute Capability: 8.9 (GeForce RTX 4070)
 
 Include screenshots, analysis, etc. (Remember, this is public, so don't put
 anything here that you don't want to share with the world.)
+
+
+https://forums.developer.nvidia.com/t/error-failed-to-profile-createversionvisualization-in-process-12840/343411/16
