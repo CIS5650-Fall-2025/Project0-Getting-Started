@@ -15,20 +15,22 @@
  * *****************************************************************************
  */
 
-// TODO 6: Implement the copy kernel
+// Implement the copy kernel
 __global__ void copyKernel(const float* const a, float* const b, const unsigned sizeX, const unsigned sizeY)
 {
-    // TODO 6a: Compute the global index for each thread along x and y dimentions.
-    unsigned i = 0;
-    unsigned j = 0;;
+    // Compute the global index for each thread along x and y dimentions.
+    unsigned i = blockDim.x * blockIdx.x + threadIdx.x;
+    unsigned j = blockDim.y * blockIdx.y + threadIdx.y;
 
-    // TODO 6b: Check if i or j are out of bounds. If they are, return.
+    // Check if i or j are out of bounds. If they are, return.
+    if (i >= sizeX || j >= sizeY)
+        return;
 
-    // TODO 6c: Compute global 1D index from i and j
-    unsigned index = 0;
+    // Compute global 1D index from i and j
+    unsigned index = j * sizeX + i;
 
-    // TODO 6d: Copy data from A to B. Note that in copy kernel source and destination indices are the same
-    // b[] = a[];
+    // Copy data from A to B. Note that in copy kernel source and destination indices are the same
+    b[index] = a[index];
 }
 
 // TODO 11: Implement the transpose kernel
@@ -98,16 +100,19 @@ int main(int argc, char *argv[])
         // LOOK: Use the clearHostAndDeviceArray function to clear b and d_b
         clearHostAndDeviceArray(b, d_b, sizeX * sizeY);
 
-        // TODO 4: Assign a 2D distribution of BS_X x BS_Y x 1 CUDA threads within
+        // Assign a 2D distribution of BS_X x BS_Y x 1 CUDA threads within
         // Calculate number of blocks along X and Y in a 2D CUDA "grid" using divup
+        const unsigned blockSize = 32;
+
         DIMS dims;
-        dims.dimBlock = dim3(1, 1, 1);
-        dims.dimGrid = dim3(1, 1, 1);
+        dims.dimBlock = dim3(blockSize, blockSize, 1);
+        dims.dimGrid = dim3(divup(sizeX, blockSize), divup(sizeY, blockSize), 1);
 
         // LOOK: Launch the copy kernel
         copyKernel<<<dims.dimGrid, dims.dimBlock>>>(d_a, d_b, sizeX, sizeY);
 
-        // TODO 5: copy the answer back to the host (CPU) from the device (GPU)
+        // Copy the answer back to the host (CPU) from the device (GPU)
+        CUDA(cudaMemcpy(b, d_b, count, cudaMemcpyDeviceToHost));
 
         // LOOK: Use compareReferenceAndResult to check the result
         compareReferenceAndResult(a_gold, b, sizeX * sizeY);
