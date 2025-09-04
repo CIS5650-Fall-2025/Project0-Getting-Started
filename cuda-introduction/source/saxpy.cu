@@ -56,9 +56,9 @@ int main(int argc, char *argv[])
     size_t count = size * sizeof(float);
 
     // Allocate memory on the device.
-    CUDA(cudaMalloc((void**) &d_x, count));
-    CUDA(cudaMalloc((void**) &d_y, count));
-    CUDA(cudaMalloc((void**) &d_z, count));
+    CUDA(cudaMalloc((void**)&d_x, count));
+    CUDA(cudaMalloc((void**)&d_y, count));
+    CUDA(cudaMalloc((void**)&d_z, count));
 
     // Copy array contents of X and Y from the host (CPU) to the device (GPU).
     CUDA(cudaMemcpy(d_x, x, count, cudaMemcpyHostToDevice));

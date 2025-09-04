@@ -52,11 +52,11 @@ __global__ void matrixTransposeNaive(const float* const a, float* const b, const
 
 int main(int argc, char *argv[])
 {
-    // TODO 1: Initialize sizes. Start with simple like 32 x 32.
-    // TODO Optional: Try different sizes - both square and non-square. Use these as examples:
+    // Initialize sizes. Start with simple like 32 x 32.
+    // Optional: Try different sizes - both square and non-square. Use these as examples:
     // 1024 x 1024, 2048 x 2048, 64 x 16, 128 x 768, 63 x 63, 31 x 15, 1025 x 1025, 1234 x 3153
-    const unsigned sizeX = 1234;
-    const unsigned sizeY = 3153;
+    const unsigned sizeX = 32;
+    const unsigned sizeY = 32;
 
     // LOOK: Allocate host arrays. The gold arrays are used to store the results from CPU.
     float* a = new float[sizeX * sizeY];
@@ -80,10 +80,14 @@ int main(int argc, char *argv[])
 
     // Device arrays
     float *d_a, *d_b;
+    size_t count = static_cast<size_t>(sizeX) * sizeY * sizeof(float);
 
-    // TODO 2: Allocate memory on the device for d_a and d_b.
+    // Allocate memory on the device for d_a and d_b.
+    CUDA(cudaMalloc((void**)&d_a, count));
+    CUDA(cudaMalloc((void**)&d_b, count));
 
-    // TODO 3: Copy array contents of A from the host (CPU) to the device (GPU)
+    // Copy array contents of A from the host (CPU) to the device (GPU)
+    CUDA(cudaMemcpy(d_a, a, count, cudaMemcpyHostToDevice));
 
     CUDA(cudaDeviceSynchronize());
 
