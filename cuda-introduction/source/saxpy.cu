@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
     // TODO 1: Set the size. Start with something simple like 64.
     // TODO Optional: Try out these sizes: 256, 1024, 2048, 14, 103, 1025, 3127
-    const unsigned size = 64;
+    const unsigned size = 3127;
 
     // Host arrays.
     float* x = new float[size];
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
     // TODO 4: Setup threads and blocks.
     // Start threadPerBlock as 128, then try out differnt configurations: 32, 64, 256, 512, 1024
     // Use divup to get the number of blocks to launch.
-    const unsigned threadsPerBlock = 128;
+    const unsigned threadsPerBlock = 1024;
 
     // TODO 5: Implement the divup function in common.cpp
     const unsigned blocks = divup(size, threadsPerBlock);
