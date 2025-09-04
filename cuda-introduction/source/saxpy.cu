@@ -70,27 +70,27 @@ int main(int argc, char *argv[])
     // LOOK: Use the preprocess function to clear z and d_z
     clearHostAndDeviceArray(z, d_z, size);
 
-    // TODO 4: Setup threads and blocks.
     // Start threadPerBlock as 128, then try out differnt configurations: 32, 64, 256, 512, 1024
     // Use divup to get the number of blocks to launch.
-    const unsigned threadsPerBlock = 0;
+    const unsigned threadsPerBlock = 128;
 
-    // TODO 5: Implement the divup function in common.cpp
     const unsigned blocks = divup(size, threadsPerBlock);
 
-    // TODO 6: Launch the GPU kernel with blocks and threadPerBlock as launch configuration
-    // saxpy<<< >>> (....);
+    // Launch the GPU kernel with blocks and threadPerBlock as launch configuration
+    saxpy<<<blocks, threadsPerBlock>>>(d_z, d_x, d_y, a, size);
 
-    // TODO 7: Copy the answer back to the host (CPU) from the device (GPU).
-    // Copy what you did in 3, except for d_z -> z.
+    // Copy the answer back to the host (CPU) from the device (GPU).
+    CUDA(cudaMemcpy(z, d_z, count, cudaMemcpyDeviceToHost));
 
     // LOOK: Use postprocess to check the result
     compareReferenceAndResult(z_gold, z, size, 1e-6);
     std::cout << "****************************************************" << std::endl << std::endl;
     ////////////////////////////////////////////////////////////
 
-    // TODO 8: free device memory using cudaFree
-    // CUDA(cudaFree(device pointer));
+    // Free device memory using cudaFree
+    CUDA(cudaFree(d_x));
+    CUDA(cudaFree(d_y));
+    CUDA(cudaFree(d_z));
 
     // free host memory
     delete[] x;
