@@ -20,9 +20,9 @@ __global__ void saxpy(float* const z, const float* const x, const float* const y
 
 int main(int argc, char *argv[])
 {
-    // TODO 1: Set the size. Start with something simple like 64.
-    // TODO Optional: Try out these sizes: 256, 1024, 2048, 14, 103, 1025, 3127
-    const unsigned size = 0;
+    // Set the size. Start with something simple like 64.
+    // Optional: Try out these sizes: 256, 1024, 2048, 14, 103, 1025, 3127
+    const unsigned size = 64;
 
     // Host arrays.
     float* x = new float[size];
@@ -50,12 +50,16 @@ int main(int argc, char *argv[])
 
     // Device arrays
     float *d_x, *d_y, *d_z;
+    size_t count = size * sizeof(float);
 
-    // TODO 2: Allocate memory on the device. Fill in the blanks for d_x, then do the same commands for d_y and d_z.
-    // CUDA(cudaMalloc((void **)& pointer, size in bytes)));
+    // Allocate memory on the device.
+    CUDA(cudaMalloc((void**) &d_x, count));
+    CUDA(cudaMalloc((void**) &d_y, count));
+    CUDA(cudaMalloc((void**) &d_z, count));
 
-    // TODO 3: Copy array contents of X and Y from the host (CPU) to the device (GPU). Follow what you did for 2,
-    // CUDA(cudaMemcpy(dest ptr, source ptr, size in bytes, direction enum));
+    // Copy array contents of X and Y from the host (CPU) to the device (GPU).
+    CUDA(cudaMemcpy(d_x, x, count, cudaMemcpyHostToDevice));
+    CUDA(cudaMemcpy(d_y, y, count, cudaMemcpyHostToDevice));
 
     CUDA(cudaDeviceSynchronize());
 
