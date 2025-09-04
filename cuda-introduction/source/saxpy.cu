@@ -8,21 +8,24 @@
 
 __global__ void saxpy(float* const z, const float* const x, const float* const y, const float a, const unsigned size)
 {
-    // TODO 9: Compute the global index for each thread.
-    unsigned idx = 0;
+    // Compute the global index for each thread.
+    // Assumptions: blockDim.y == 1 (so it's a N x 1 configuration of blocks), threadIdx.y == 1 (so it's a
+    // N x 1 configuration of threads)
+    unsigned idx = blockIdx.x * blockDim.x + threadIdx.x;
 
-    // TODO 10: Check if idx is out of bounds. If yes, return.
-    if (idx >= 0)
+    // Check if idx is out of bounds. If yes, return.
+    if (idx >= size)
         return;
 
-    // TODO 11: Perform the SAXPY operation: z = a * x + y.
+    // Perform the SAXPY operation: z = a * x + y.
+    z[idx] = a * x[idx] + y[idx];
 }
 
 int main(int argc, char *argv[])
 {
-    // TODO 1: Set the size. Start with something simple like 64.
-    // TODO Optional: Try out these sizes: 256, 1024, 2048, 14, 103, 1025, 3127
-    const unsigned size = 0;
+    // Set the size. Start with something simple like 64.
+    // Optional: Try out these sizes: 256, 1024, 2048, 14, 103, 1025, 3127
+    const unsigned size = 257;
 
     // Host arrays.
     float* x = new float[size];
@@ -50,12 +53,16 @@ int main(int argc, char *argv[])
 
     // Device arrays
     float *d_x, *d_y, *d_z;
+    size_t count = size * sizeof(float);
 
-    // TODO 2: Allocate memory on the device. Fill in the blanks for d_x, then do the same commands for d_y and d_z.
-    // CUDA(cudaMalloc((void **)& pointer, size in bytes)));
+    // Allocate memory on the device.
+    CUDA(cudaMalloc((void**)&d_x, count));
+    CUDA(cudaMalloc((void**)&d_y, count));
+    CUDA(cudaMalloc((void**)&d_z, count));
 
-    // TODO 3: Copy array contents of X and Y from the host (CPU) to the device (GPU). Follow what you did for 2,
-    // CUDA(cudaMemcpy(dest ptr, source ptr, size in bytes, direction enum));
+    // Copy array contents of X and Y from the host (CPU) to the device (GPU).
+    CUDA(cudaMemcpy(d_x, x, count, cudaMemcpyHostToDevice));
+    CUDA(cudaMemcpy(d_y, y, count, cudaMemcpyHostToDevice));
 
     CUDA(cudaDeviceSynchronize());
 
@@ -66,27 +73,27 @@ int main(int argc, char *argv[])
     // LOOK: Use the preprocess function to clear z and d_z
     clearHostAndDeviceArray(z, d_z, size);
 
-    // TODO 4: Setup threads and blocks.
     // Start threadPerBlock as 128, then try out differnt configurations: 32, 64, 256, 512, 1024
     // Use divup to get the number of blocks to launch.
-    const unsigned threadsPerBlock = 0;
+    const unsigned threadsPerBlock = 128;
 
-    // TODO 5: Implement the divup function in common.cpp
     const unsigned blocks = divup(size, threadsPerBlock);
 
-    // TODO 6: Launch the GPU kernel with blocks and threadPerBlock as launch configuration
-    // saxpy<<< >>> (....);
+    // Launch the GPU kernel with blocks and threadPerBlock as launch configuration
+    saxpy<<<blocks, threadsPerBlock>>>(d_z, d_x, d_y, a, size);
 
-    // TODO 7: Copy the answer back to the host (CPU) from the device (GPU).
-    // Copy what you did in 3, except for d_z -> z.
+    // Copy the answer back to the host (CPU) from the device (GPU).
+    CUDA(cudaMemcpy(z, d_z, count, cudaMemcpyDeviceToHost));
 
     // LOOK: Use postprocess to check the result
     compareReferenceAndResult(z_gold, z, size, 1e-6);
     std::cout << "****************************************************" << std::endl << std::endl;
     ////////////////////////////////////////////////////////////
 
-    // TODO 8: free device memory using cudaFree
-    // CUDA(cudaFree(device pointer));
+    // Free device memory using cudaFree
+    CUDA(cudaFree(d_x));
+    CUDA(cudaFree(d_y));
+    CUDA(cudaFree(d_z));
 
     // free host memory
     delete[] x;

@@ -7,9 +7,15 @@
 
 unsigned divup(unsigned size, unsigned div)
 {
-    // TODO: implement a 1 line function to return the divup operation.
+    // Implement a 1 line function to return the divup operation.
     // Note: You only need to use addition, subtraction, and division operations.
-    return 0;
+    unsigned result = size / div;
+
+    if (result * div != size) {
+        return result + 1;
+    } else {
+        return result;
+    }
 }
 
 void clearHostAndDeviceArray(float *res, float *dev_res, unsigned size, const int value)
