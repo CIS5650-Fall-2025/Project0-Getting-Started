@@ -215,6 +215,10 @@ install_manifest.txt
 *.app
 
 
+### Clangd ###
+.cache/clangd
+
+
 ### CUDA ###
 *.i
 *.ii
