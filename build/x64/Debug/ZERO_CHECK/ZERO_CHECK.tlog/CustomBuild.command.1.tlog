@@ -1,0 +1,10 @@
+^D:\STUDY MATERIALS\UPENN\CIS 5650\PROJECT0-GETTING-STARTED\BUILD\CMAKEFILES\3D3DADAE3DB2CFACE54E9CBD9D8E9B33\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Study Materials/UPenn/CIS 5650/Project0-Getting-Started/cuda-gl-check" "-BD:/Study Materials/UPenn/CIS 5650/Project0-Getting-Started/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Study Materials/UPenn/CIS 5650/Project0-Getting-Started/build/cuda-gl-check.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
