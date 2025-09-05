@@ -1,4 +1,4 @@
-<img width="1338" height="1375" alt="2 1 2" src="https://github.com/user-attachments/assets/edbfd97b-f082-492f-9cea-1f1d8f44ff3d" />Project 0 Getting Started
+Project 0 Getting Started
 ====================
 
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
