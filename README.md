@@ -26,9 +26,9 @@ NSight Systems analysis summary and timeline
 ### 2.2
 WebGL compatibility check
 
-<img src="images/2.2" width="40%">
+<img src="images/2.2.png" width="40%">
 
 ### 2.3
 WebGPU compatibility check
 
-<img src="images/2.3" width="40%">
+<img src="images/2.3.png" width="40%">
