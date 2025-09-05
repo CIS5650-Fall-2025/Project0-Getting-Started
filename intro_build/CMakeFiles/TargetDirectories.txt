@@ -1,0 +1,5 @@
+C:/College/CIS565/Project0-Getting-Started/intro_build/CMakeFiles/saxpy.dir
+C:/College/CIS565/Project0-Getting-Started/intro_build/CMakeFiles/transpose.dir
+C:/College/CIS565/Project0-Getting-Started/intro_build/CMakeFiles/matmul.dir
+C:/College/CIS565/Project0-Getting-Started/intro_build/CMakeFiles/ALL_BUILD.dir
+C:/College/CIS565/Project0-Getting-Started/intro_build/CMakeFiles/ZERO_CHECK.dir

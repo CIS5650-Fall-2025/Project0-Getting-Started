@@ -1,0 +1,71 @@
+﻿  Building Custom Rule C:/College/CIS565/Project0-Getting-Started/cuda-introduction/CMakeLists.txt
+  Compiling CUDA source file ..\cuda-introduction\source\saxpy.cu...
+  
+  C:\College\CIS565\Project0-Getting-Started\intro_build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\bin\nvcc.exe"  --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu    -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\include"  -G   --keep-dir saxpy\x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -std=c++17 -arch=native -src-in-ptx -Xcompiler="/EHsc -Zi -Ob0" -g  -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -D"CMAKE_INTDIR=\"Debug\"" -Xcompiler "/EHsc /W1 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/Fdsaxpy.dir\Debug\vc143.pdb" -o saxpy.dir\Debug\saxpy.obj "C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu" 
+  Compiling CUDA source file ..\cuda-introduction\source\common.cu...
+  
+  C:\College\CIS565\Project0-Getting-Started\intro_build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\bin\nvcc.exe"  --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu    -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\include"  -G   --keep-dir saxpy\x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -std=c++17 -arch=native -src-in-ptx -Xcompiler="/EHsc -Zi -Ob0" -g  -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -D"CMAKE_INTDIR=\"Debug\"" -Xcompiler "/EHsc /W1 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/Fdsaxpy.dir\Debug\vc143.pdb" -o saxpy.dir\Debug\common.obj "C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\common.cu" 
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(15): warning #186-D: pointless comparison of unsigned integer with zero
+        if (idx >= 0)
+                ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(41): warning #186-D: pointless comparison of unsigned integer with zero
+        for (unsigned i = 0; i < size; i++) {
+                               ^
+  
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(48): warning #186-D: pointless comparison of unsigned integer with zero
+        for (unsigned i = 0; i < size; i++)
+                               ^
+  
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(67): warning #549-D: variable "d_z" is used before its value is set
+        clearHostAndDeviceArray(z, d_z, size);
+                                   ^
+  
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(15): warning #186-D: pointless comparison of unsigned integer with zero
+        if (idx >= 0)
+                ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(41): warning #186-D: pointless comparison of unsigned integer with zero
+        for (unsigned i = 0; i < size; i++) {
+                               ^
+  
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(48): warning #186-D: pointless comparison of unsigned integer with zero
+        for (unsigned i = 0; i < size; i++)
+                               ^
+  
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(67): warning #549-D: variable "d_z" is used before its value is set
+        clearHostAndDeviceArray(z, d_z, size);
+                                   ^
+  
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(52): warning #177-D: variable "d_x" was declared but never referenced
+        float *d_x, *d_y, *d_z;
+               ^
+  
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(52): warning #177-D: variable "d_y" was declared but never referenced
+        float *d_x, *d_y, *d_z;
+                     ^
+  
+  saxpy.cu
+  tmpxft_00007e38_00000000-8_saxpy.cudafe1.cpp
+C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\saxpy.cu(67): warning C4700: uninitialized local variable 'd_z' used
+  common.cu
+  tmpxft_00008884_00000000-8_common.cudafe1.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(5310): warning C4244: '=': conversion from 'const _Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(5310): note: the template instantiation context (the oldest one first) is
+  C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\common.cu(17): note: see reference to function template instantiation 'void std::fill<float*,int>(const _FwdIt,const _FwdIt,const _Ty &)' being compiled
+          with
+          [
+              _FwdIt=float *,
+              _Ty=int
+          ]
+     Creating library C:/College/CIS565/Project0-Getting-Started/intro_build/lib/Debug/saxpy.lib and object C:/College/CIS565/Project0-Getting-Started/intro_build/lib/Debug/saxpy.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  saxpy.vcxproj -> C:\College\CIS565\Project0-Getting-Started\intro_build\bin\Debug\saxpy.exe

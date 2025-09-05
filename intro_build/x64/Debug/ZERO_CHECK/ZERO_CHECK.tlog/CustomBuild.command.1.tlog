@@ -1,0 +1,10 @@
+^C:\COLLEGE\CIS565\PROJECT0-GETTING-STARTED\INTRO_BUILD\CMAKEFILES\F1134A827126FE1442E0F70F08D16EDA\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/College/CIS565/Project0-Getting-Started/cuda-introduction -BC:/College/CIS565/Project0-Getting-Started/intro_build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/College/CIS565/Project0-Getting-Started/intro_build/CUDAIntroduction.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
