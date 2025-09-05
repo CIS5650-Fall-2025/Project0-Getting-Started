@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\College\\CIS565\\Project0-Getting-Started\\build\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3287673-5217-39CA-A101-942D03631F83}|cuda-gl-check.vcxproj|C:\\College\\CIS565\\Project0-Getting-Started\\cuda-gl-check\\src\\kernel.cu||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3287673-5217-39CA-A101-942D03631F83}|cuda-gl-check.vcxproj|C:\\College\\CIS565\\Project0-Getting-Started\\cuda-gl-check\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "kernel.cu",
+              "DocumentMoniker": "C:\\College\\CIS565\\Project0-Getting-Started\\cuda-gl-check\\src\\kernel.cu",
+              "RelativeDocumentMoniker": "..\\cuda-gl-check\\src\\kernel.cu",
+              "ToolTip": "C:\\College\\CIS565\\Project0-Getting-Started\\cuda-gl-check\\src\\kernel.cu",
+              "RelativeToolTip": "..\\cuda-gl-check\\src\\kernel.cu",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEkAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-02T09:57:25.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\College\\CIS565\\Project0-Getting-Started\\cuda-gl-check\\src\\main.cpp",
+              "RelativeDocumentMoniker": "..\\cuda-gl-check\\src\\main.cpp",
+              "ToolTip": "C:\\College\\CIS565\\Project0-Getting-Started\\cuda-gl-check\\src\\main.cpp",
+              "RelativeToolTip": "..\\cuda-gl-check\\src\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-02T09:38:31.233Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

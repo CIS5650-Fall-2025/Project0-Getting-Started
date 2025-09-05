@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\College\CIS565\Project0-Getting-Started\cuda-introduction\source\termcolor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\cuda-introduction\source\matmul.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\cuda-introduction\source\common.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\College\CIS565\Project0-Getting-Started\cuda-introduction\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70B8FDFB-6C34-3551-99F8-2E00FFCB4E8B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A2E46B7E-ECC4-3656-AE7F-8223E1584D50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

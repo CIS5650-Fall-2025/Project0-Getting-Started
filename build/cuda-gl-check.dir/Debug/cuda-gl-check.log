@@ -1,0 +1,33 @@
+﻿  Building Custom Rule C:/College/CIS565/Project0-Getting-Started/cuda-gl-check/CMakeLists.txt
+  Compiling CUDA source file ..\cuda-gl-check\src\kernel.cu...
+  
+  C:\College\CIS565\Project0-Getting-Started\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\bin\nvcc.exe"  --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu -rdc=true  -I"C:\College\CIS565\Project0-Getting-Started\cuda-gl-check\external\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\include\cccl" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\include"  -G   --keep-dir cuda-gl-check\x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -arch=native -Xcompiler="/EHsc -Zi -Ob0" -g  -D_WINDOWS -DGLEW_STATIC -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -DWIN32 -D_WINDOWS -DGLEW_STATIC -D"CMAKE_INTDIR=\"Debug\"" -Xcompiler "/EHsc /W1 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/Fdcuda-gl-check.dir\Debug\vc143.pdb" -o cuda-gl-check.dir\Debug\kernel.obj "C:\College\CIS565\Project0-Getting-Started\cuda-gl-check\src\kernel.cu" 
+  kernel.cu
+  tmpxft_00007d78_00000000-8_kernel.cudafe1.cpp
+  glslUtility.cpp
+  main.cpp
+  Generating Code...
+  
+  C:\College\CIS565\Project0-Getting-Started\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\bin\nvcc.exe" -dlink  -o cuda-gl-check.dir\Debug\cuda-gl-check.device-link.obj -Xcompiler "/EHsc /W1 /nologo /Od /Zi /RTC1 /MDd /GR" -Xcompiler "/Fdcuda-gl-check.dir\Debug\vc143.pdb" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\bin\x64/crt" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\lib\x64" -L"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/lib/x64" -L"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/lib/x64/Debug" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\lib\x64" "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.0\lib\x64\cudart.lib" opengl32.lib glu32.lib "C:\College\CIS565\Project0-Getting-Started\cuda-gl-check\external\lib\glew32s.lib" "C:\College\CIS565\Project0-Getting-Started\cuda-gl-check\external\lib\glfw3.lib" cudadevrt.lib cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib -forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets -D_WINDOWS -Xcompiler=" /GR /EHsc" -Xcompiler=" -Zi -Ob0 -Od /RTC1" -arch=native -Xcompiler=-MDd  -G  "cuda-gl-check.dir\Debug\kernel.obj" 
+  cudart.lib
+  opengl32.lib
+  glu32.lib
+  glew32s.lib
+  glfw3.lib
+  cudadevrt.lib
+  cudart_static.lib
+  kernel32.lib
+  user32.lib
+  gdi32.lib
+  winspool.lib
+  shell32.lib
+  ole32.lib
+  oleaut32.lib
+  uuid.lib
+  comdlg32.lib
+  advapi32.lib
+  kernel.obj
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\College\CIS565\Project0-Getting-Started\build\bin\Debug\vc120.pdb'; linking object as if no debug info
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  cuda-gl-check.vcxproj -> C:\College\CIS565\Project0-Getting-Started\build\bin\Debug\cuda-gl-check.exe

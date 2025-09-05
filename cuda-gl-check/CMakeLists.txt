@@ -23,6 +23,7 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     SET_PROPERTY(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
+
 find_package(OpenGL REQUIRED)
 
 if(UNIX)
@@ -65,7 +66,21 @@ source_group(Headers FILES ${headers})
 source_group(Sources FILES ${sources})
 
 add_executable(${CMAKE_PROJECT_NAME} ${sources} ${headers})
-target_link_libraries(${CMAKE_PROJECT_NAME} ${LIBRARIES})
+
+
+
+# find and link CUDA toolkit
+find_package(CUDAToolkit REQUIRED)
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE CUDA::cudart ${LIBRARIES})
+
+# enable separable compilation for CUDA
+set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
+     CUDA_SEPARABLE_COMPILATION ON
+)
+
+
+
+
 if(CMAKE_VERSION VERSION_LESS "3.23.0")
     set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES CUDA_ARCHITECTURES OFF)
 elseif(CMAKE_VERSION VERSION_LESS "3.24.0")
