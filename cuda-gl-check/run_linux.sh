@@ -22,6 +22,4 @@ while true; do
     esac
 done
 
-__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia $SCRIPT_DIR/build/bin/cuda-gl-check
-
-
+XDG_SESSION_TYPE=x11 $SCRIPT_DIR/build/bin/cuda-gl-check
