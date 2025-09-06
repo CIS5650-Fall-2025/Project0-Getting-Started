@@ -3,11 +3,43 @@ Project 0 Getting Started
 
 **University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 0**
 
-* (TODO) YOUR NAME HERE
-  * (TODO) [LinkedIn](), [personal website](), [twitter](), etc.
-* Tested on: (TODO) Windows 22, i7-2222 @ 2.22GHz 22GB, GTX 222 222MB (Moore 2222 Lab)
+* Neha Thumu
+  * [LinkedIn](https://www.linkedin.com/in/neha-thumu/)
+* Tested on: Windows 11 Pro, i9-13900H @ 2.60GHz 32GB, Nvidia GeForce RTX 4070
 
-### (TODO: Your README)
+# Screenshots for Project 0
 
-Include screenshots, analysis, etc. (Remember, this is public, so don't put
-anything here that you don't want to share with the world.)
+## Output window from exe: 
+
+![exeoutput](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.1.2.png)
+
+## NSight Debugging Window from Visual Studio
+
+![debuggingwin](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.1.3.png)
+
+## NSight Systems Report Screenshots
+
+### Analysis
+
+![systemsanalysis](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.1.4.png)
+
+### Timeline
+
+![systemstimeline](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.1.4v2.png)
+
+## NSight Compute Report 
+### Unavailable due to a bug in Compute 
+
+## WebGL Screenshot 
+
+### WebGL Compatibility 
+
+![glcomp](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.2v2.png)
+
+### Chrome GPU
+
+![chromegpu](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.2.png)
+
+### WebGPU Screenshot
+
+![webgpu](https://github.com/thumun/Project0-Getting-Started/blob/main/images/2.2.png)
