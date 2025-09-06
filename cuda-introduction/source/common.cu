@@ -9,6 +9,7 @@ unsigned divup(unsigned size, unsigned div)
 {
     // TODO: implement a 1 line function to return the divup operation.
     // Note: You only need to use addition, subtraction, and division operations.
+	return (size + div - 1) / div;
     return 0;
 }
 

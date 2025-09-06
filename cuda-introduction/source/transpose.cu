@@ -20,15 +20,19 @@ __global__ void copyKernel(const float* const a, float* const b, const unsigned 
 {
     // TODO 6a: Compute the global index for each thread along x and y dimentions.
     unsigned i = 0;
-    unsigned j = 0;;
-
+    unsigned j = 0;
+	i = blockIdx.x * blockDim.x + threadIdx.x;
+	j = blockIdx.y * blockDim.y + threadIdx.y;
     // TODO 6b: Check if i or j are out of bounds. If they are, return.
+	if (i >= sizeX || j >= sizeY)
+		return;
 
     // TODO 6c: Compute global 1D index from i and j
     unsigned index = 0;
-
+	index = j * sizeX + i;
     // TODO 6d: Copy data from A to B. Note that in copy kernel source and destination indices are the same
     // b[] = a[];
+	b[index] = a[index];
 }
 
 // TODO 11: Implement the transpose kernel
@@ -40,14 +44,18 @@ __global__ void matrixTransposeNaive(const float* const a, float* const b, const
     // TODO 11a: Compute the global index for each thread along x and y dimentions.
     unsigned i = 0;
     unsigned j = 0;
-
+	i = blockIdx.x * blockDim.x + threadIdx.x;
+	j = blockIdx.y * blockDim.y + threadIdx.y;
     // TODO 11b: Check if i or j are out of bounds. If they are, return.
-
+    if (i >= sizeX || j >= sizeY)
+		return;
     // TODO 11c: Compute index_in as (i,j) (same as index in copy kernel) and index_out as (j,i)
     unsigned index_in  = 0;  // Compute input index (i,j) from matrix A
     unsigned index_out = 0;  // Compute output index (j,i) in matrix B = transpose(A)
-
+	index_in = j * sizeX + i;
+	index_out = i * sizeY + j;
     // TODO 11d: Copy data from A to B using transpose indices
+	b[index_out] = a[index_in];
 }
 
 int main(int argc, char *argv[])
@@ -82,9 +90,11 @@ int main(int argc, char *argv[])
     float *d_a, *d_b;
 
     // TODO 2: Allocate memory on the device for d_a and d_b.
-
+	int size_in_bytes = sizeX * sizeY * sizeof(float);
+	CUDA(cudaMalloc((void**)&d_a, size_in_bytes));
+	CUDA(cudaMalloc((void**)&d_b, size_in_bytes));
     // TODO 3: Copy array contents of A from the host (CPU) to the device (GPU)
-
+	CUDA(cudaMemcpy(d_a, a, size_in_bytes, cudaMemcpyHostToDevice));
     CUDA(cudaDeviceSynchronize());
 
     ////////////////////////////////////////////////////////////
@@ -97,14 +107,14 @@ int main(int argc, char *argv[])
         // TODO 4: Assign a 2D distribution of BS_X x BS_Y x 1 CUDA threads within
         // Calculate number of blocks along X and Y in a 2D CUDA "grid" using divup
         DIMS dims;
-        dims.dimBlock = dim3(1, 1, 1);
-        dims.dimGrid = dim3(1, 1, 1);
+        dims.dimBlock = dim3(16, 16, 1);
+		dims.dimGrid = dim3(divup(sizeX, dims.dimBlock.x), divup(sizeY, dims.dimBlock.y), 1);
 
         // LOOK: Launch the copy kernel
         copyKernel<<<dims.dimGrid, dims.dimBlock>>>(d_a, d_b, sizeX, sizeY);
 
         // TODO 5: copy the answer back to the host (CPU) from the device (GPU)
-
+		CUDA(cudaMemcpy(b, d_b, size_in_bytes, cudaMemcpyDeviceToHost));
         // LOOK: Use compareReferenceAndResult to check the result
         compareReferenceAndResult(a_gold, b, sizeX * sizeY);
     }
@@ -121,14 +131,14 @@ int main(int argc, char *argv[])
         // TODO 8: Assign a 2D distribution of BS_X x BS_Y x 1 CUDA threads within
         // Calculate number of blocks along X and Y in a 2D CUDA "grid" using divup
         DIMS dims;
-        dims.dimBlock = dim3(1, 1, 1);
-        dims.dimGrid = dim3(1, 1, 1);
+        dims.dimBlock = dim3(32, 16, 1);
+        dims.dimGrid = dim3(divup(sizeX, dims.dimBlock.x), divup(sizeY, dims.dimBlock.y), 1);
 
         // TODO 9: Launch the matrix transpose kernel
         // matrixTransposeNaive<<<>>>(......);
-
+		matrixTransposeNaive <<<dims.dimGrid, dims.dimBlock >>> (d_a, d_b, sizeX, sizeY);
         // TODO 10: copy the answer back to the host (CPU) from the device (GPU)
-
+		CUDA(cudaMemcpy(b, d_b, size_in_bytes, cudaMemcpyDeviceToHost));
         // LOOK: Use compareReferenceAndResult to check the result
         compareReferenceAndResult(b_gold, b, sizeX * sizeY);
     }
@@ -136,7 +146,8 @@ int main(int argc, char *argv[])
     ////////////////////////////////////////////////////////////
 
     // TODO 7: free device memory using cudaFree
-
+	CUDA(cudaFree(d_a));
+	CUDA(cudaFree(d_b));
     // free host memory
     delete[] a;
     delete[] b;
