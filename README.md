@@ -20,6 +20,8 @@ CUDA:
 
 ### Part 2.1.1: Project Build & Run
 
+#### GPU Optimus Mode
+
 On Linux Wayland, NVIDIA GPU is not the primary GPU. Build & run without modification leads to the following error:
 
 ```bash
@@ -31,6 +33,26 @@ To solve this, two environment variables must be added wherever I run the execut
 ```bash
 __PRIME_RENDER_OFFLOAD=1
 __GLX_VENDOR_LIBRARY_NAME=nvidia
+```
+
+Alternatively, modify the `/etc/environment` file to contain:
+
+```bash
+QT_QPA_PLATFORMTHEME="wayland;xcb"
+GBM_BACKEND=nvidia-drm
+__GLX_VENDOR_LIBRARY_NAME=nvidia
+ENABLE_VKBASALT=1
+LIBVA_DRIVER_NAME=nvidia
+WLR_NO_HARDWARE_CURSORS=1
+```
+
+#### GLFW and Wayland incompability
+
+When using GLFW on Wayland, the `glfwInit()` function does not work (program will exit at `Line 49` of `main.cpp`). To counter this, set two environment variables:
+
+```bash
+WAYLAND_DISPLAY=""
+XDG_SESSION_TYPE=x11
 ```
 
 #### CMakeLists.txt Modification
