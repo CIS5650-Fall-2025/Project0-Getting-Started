@@ -158,6 +158,8 @@ int main(int argc, char *argv[])
     ////////////////////////////////////////////////////////////
 
     // TODO 7: free device memory using cudaFree
+    CUDA(cudaFree(d_a));
+    CUDA(cudaFree(d_b));
 
     // free host memory
     delete[] a;
