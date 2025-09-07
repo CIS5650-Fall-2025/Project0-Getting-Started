@@ -9,11 +9,13 @@
 __global__ void saxpy(float* const z, const float* const x, const float* const y, const float a, const unsigned size)
 {
     // TODO 9: Compute the global index for each thread.
-    unsigned idx = threadIdx.x;
+    unsigned idx = blockIdx.x * blockDim.x + threadIdx.x;
 
     // TODO 10: Check if idx is out of bounds. If yes, return.
-    if (idx >= size)
-        {return;}
+    if (idx >= size) 
+    {
+        return;
+    }
 
     // TODO 11: Perform the SAXPY operation: z = a * x + y.
 
@@ -24,7 +26,7 @@ int main(int argc, char *argv[])
 {
     // TODO 1: Set the size. Start with something simple like 64.
     // TODO Optional: Try out these sizes: 256, 1024, 2048, 14, 103, 1025, 3127
-    const unsigned size = 64;
+    const unsigned size = 256;
 
     // Host arrays.
     float* x = new float[size];

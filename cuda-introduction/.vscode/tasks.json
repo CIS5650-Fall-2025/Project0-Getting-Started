@@ -9,7 +9,7 @@
                 "${command:cmake.buildTargetName}"
             ],
             "group": "build",
-            "problemMatcher": [],
+            "problemMatcher": ["$nvcc"],
             "detail": "CMake template build task"
         },
     ]
