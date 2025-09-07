@@ -3,9 +3,10 @@
     "configurations": [
         {
             "name": "CUDA C++: Launch",
+            "preLaunchTask": "CMake: build",
             "type": "cuda-gdb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/saxpy",
+            "program": "${command:cmake.launchTargetPath}",
         }
     ]
 }
