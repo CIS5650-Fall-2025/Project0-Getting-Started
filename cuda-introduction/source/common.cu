@@ -9,7 +9,7 @@ unsigned divup(unsigned size, unsigned div)
 {
     // TODO: implement a 1 line function to return the divup operation.
     // Note: You only need to use addition, subtraction, and division operations.
-    return 0;
+    return (size + div - 1) / div;
 }
 
 void clearHostAndDeviceArray(float *res, float *dev_res, unsigned size, const int value)
@@ -26,6 +26,11 @@ bool compareReferenceAndResult(const float *ref, const float *res, unsigned size
     bool passed = true;
     for (unsigned i = 0; i < size; i++)
     {
+#if 0
+        // print thread info regardless of fail or not
+        std::cout << "ID: " << i << " \t Res: " << res[i] << " \t Ref: " << ref[i] << std::endl;
+#endif
+
         // LOOK: Check if floating point values are equal within an epsilon as returns can vary slightly between CPU and GPU
         if (std::fabs(res[i] - ref[i]) > epsilon)
         {
