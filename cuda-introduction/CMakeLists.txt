@@ -31,7 +31,7 @@ set(common_sources
 ########################################
 # Setup the executables
 ########################################
-set(EXECUTABLES saxpy transpose matmul)
+set(EXECUTABLES saxpy transpose matmul thrust)
 foreach(exe ${EXECUTABLES})
     add_executable(${exe} source/${exe}.cu ${common_headers} ${common_sources})
     if(CMAKE_VERSION VERSION_LESS "3.23.0")
@@ -41,6 +41,7 @@ foreach(exe ${EXECUTABLES})
     else()
         set_target_properties(${exe} PROPERTIES CUDA_ARCHITECTURES native)
     endif()
+    set_target_properties(${exe} PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
     target_compile_options(${exe} PRIVATE "$<$<AND:$<CONFIG:Debug,RelWithDebInfo>,$<COMPILE_LANGUAGE:CUDA>>:-G;-src-in-ptx>")
     target_compile_options(${exe} PRIVATE "$<$<AND:$<CONFIG:Release>,$<COMPILE_LANGUAGE:CUDA>>:-lineinfo;-src-in-ptx>")
 endforeach()
